@@ -1,5 +1,6 @@
 #!/usr/bin/python
-import toFile as function
+import toFile as toFile
+import function as function
 mcand = 10383
 mplier = 32766
 x1 = 0
@@ -30,15 +31,15 @@ for x in range ( sizeOfMulti ):
     if(product[ sizeOfProduct - 1 ] == '1'):
         print("1 -> PI = PI + M ")
         print("product : ", x1)
-        x1 = function.numToBinary((int(x1, 2) + int(x2, 2)), sizeOfProduct)
+        x1 = function.numToBinary((int(x1, 2) + int(x2, 2)), sizeOfProduct) # add
     elif (product[ sizeOfProduct - 1 ] == '0'):
         print ("0 -> no op")
         print("product : ", x1)
-        x1 = function.numToBinary(int(x1, 2) + int(zero, 2), sizeOfProduct)
+        x1 = function.numToBinary(int(x1, 2) + int(zero, 2), sizeOfProduct) # add
     # ----- shift right
     print("Mcand : ", x2)
     # shift right 1 bit and store to x1
-    x1 = bin(int(x1,base = 2) >> 1) # convert x1 to binary on form 0bxxxxxxx
+    x1 = bin(int(x1,base = 2) >> 1) # shift right 1 bit
     tempx1 = x1.split('b')
     x1 = function.numToBinary(int(tempx1[1],2),sizeOfProduct)
     print("Product  : ", x1)
