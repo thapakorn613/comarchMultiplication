@@ -5,7 +5,7 @@ numline = 0
 
 
 def write(code):
-    f = open('file/MachineCode.txt', 'a')
+    f = open('file/instruction.txt', 'a')
     f.write(code + '\n')
     f.close()
 

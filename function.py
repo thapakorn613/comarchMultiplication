@@ -8,6 +8,39 @@ def numToBinary(n,rangeOffbit):
     result = result[::-1]
     return result
 
+def binToDecimal(str):
+    n = 0
+    temp = 0
+    sum = 0
+    str_exe = list (str)
+    for x in reversed(str_exe):
+        if x == "1":
+            temp = 2 ** n
+        elif x == "0":
+            temp = 0
+        sum = sum + temp
+        n = n + 1
+    return sum
+
+def andFunction(a,b): # ไม่ต้องนำไปทำใน inst
+    tempA = list(a)
+    tempB = list(b)
+    sum = 0
+    for x in range(len(a)):
+        if (int(tempA[x]) and int(tempB[x]) ) == 1:
+            sum = sum + 1
+        elif (int(tempA[x]) and int(tempB[x]) ) == 0:
+            sum =  sum + 0
+    return sum
+
+def shiftLeft(str, num):
+    tempNum = binToDecimal(str)
+    if (num == 1):
+        tempNum = tempNum + tempNum
+    else :
+        for x in range(num ):
+            tempNum = tempNum + tempNum
+    return bin(tempNum)
 # ---------------- Error check ------------------
 # not complete all
 def error_detect(mchcodee):

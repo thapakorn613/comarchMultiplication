@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../projectComArch/.idea/comArchTest.iml" filepath="$PROJECT_DIR$/../projectComArch/.idea/comArchTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/comarchMultiplier.iml" filepath="$PROJECT_DIR$/.idea/comarchMultiplier.iml" />
     </modules>
   </component>
