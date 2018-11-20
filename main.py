@@ -1,18 +1,26 @@
 #!/usr/bin/python
 import toFile as toFile
 import function as function
+import os
+os.remove("file/instruction.txt")
 mcand = 6
+toFile.write("  add 0   2   0")
+toFile.write("  lw  2   0   mcand")
 mplier = 2
+toFile.write("  add 0   3   0")
+toFile.write("  lw  3   0   mplier")
 x1 = 0
+toFile.write("  add 0   1   0")
 result = int(mcand*mplier)
 print ("result[x1] = " , result )
 print("-----------------------------------")
 sizeOfMulti = 4
+toFile.write("  add 0   3   0")
+toFile.write("  lw  3   0   #15#")
 sizeOfProduct = 8
 # initial value
 x2 = function.numToBinary(mcand,sizeOfMulti) # mcand
-toFile.write("    add 0   2   0")
-toFile.write(" lw  2   0   mcand")
+
 x3 = function.numToBinary(mplier,sizeOfMulti) # mplier
 result = function.numToBinary(result,sizeOfProduct) #
 x1 = function.numToBinary(0,sizeOfProduct) # Product
