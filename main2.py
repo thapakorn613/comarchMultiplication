@@ -1,6 +1,3 @@
-#!/usr/bin/python
-import toFile as toFile
-import function as function
 mcand = 3
 mplier = 4
 x3 = 0
