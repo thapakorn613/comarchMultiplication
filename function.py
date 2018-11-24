@@ -1,4 +1,4 @@
-
+import toFile as toFile
 def numToBinary(n,rangeOffbit):
     result = ''
     for x in range(rangeOffbit):
@@ -35,6 +35,7 @@ def andFunction(a,b): # ไม่ต้องนำไปทำใน inst
 
 def shiftLeft(str, num):
     tempNum = binToDecimal(str)
+    toFile.write("  add  8   8   8")  # == == == == == == == == == == ==
     if (num == 1):
         tempNum = tempNum + tempNum
     else :
